@@ -44,10 +44,10 @@ A **venv** is a private copy of Python packages for this project. It keeps thing
 **You only need to create it once.** After that, you just activate it when you want to run the scripts.
 
 ```cmd
-python -m venv venv
+python -m venv .venv
 ```
 
-This creates a folder called `venv` in the project. You can ignore that folder — it’s just for Python packages.
+This creates a folder called `.venv` in the project. You can ignore that folder — it’s just for Python packages.
 
 ### 3. Activate the venv
 
@@ -56,25 +56,25 @@ This creates a folder called `venv` in the project. You can ignore that folder �
 **Windows (Command Prompt):**
 
 ```cmd
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 **Windows (PowerShell):**
 
 ```powershell
-venv\Scripts\Activate.ps1
+.venv\Scripts\Activate.ps1
 ```
 
 **Mac / Linux:**
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
-When it worked, you’ll see `(venv)` at the start of your command line, for example:
+When it worked, you’ll see `(.venv)` at the start of your command line, for example:
 
 ```text
-(venv) C:\Users\You\pose-detection-tests>
+(.venv) C:\Users\You\pose-detection-tests>
 ```
 
 ### 4. Install the packages
@@ -110,22 +110,22 @@ Each time you want to run a script:
    **Windows (Command Prompt):**
 
    ```cmd
-   venv\Scripts\activate
+   .venv\Scripts\activate
    ```
 
    **Windows (PowerShell):**
 
    ```powershell
-   venv\Scripts\Activate.ps1
+   .venv\Scripts\Activate.ps1
    ```
 
    **Mac / Linux:**
 
    ```bash
-   source venv/bin/activate
+   source .venv/bin/activate
    ```
 
-   You should see `(venv)` at the start of your command line.
+   You should see `(.venv)` at the start of your command line.
 
 3. Run one of the scripts:
 
@@ -155,7 +155,7 @@ You **do not** create it again. Just:
 2. Activate it:
 
    ```cmd
-   venv\Scripts\activate
+   .venv\Scripts\activate
    ```
 
 3. Run a script:
@@ -173,9 +173,9 @@ You **do not** create it again. Just:
 - Close other apps using the camera (Zoom, Teams, etc.)
 - Make sure no other script is already using the camera
 
-**`(venv)` doesn’t appear after activate**
+**`(.venv)` doesn’t appear after activate**
 
-- Make sure you’re in the project folder (the one that contains the `venv` folder)
+- Make sure you’re in the project folder (the one that contains the `.venv` folder)
 - On PowerShell, you may need: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` (once), then try activate again
 
 **YOLO is slow**
@@ -200,4 +200,4 @@ You **do not** create it again. Just:
 | `test_yolo11_pose_webcam.py` | YOLO11 webcam pose test |
 | `test_mediapipe_pose_webcam.py` | MediaPipe webcam pose test |
 | `requirements.txt` | Python packages to install |
-| `venv/` | Virtual environment (created by you, not in git) |
+| `.venv/` | Virtual environment (created by you, not in git) |
