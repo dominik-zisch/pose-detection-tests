@@ -99,21 +99,47 @@ You don’t need this for the MediaPipe script.
 
 ## Running the scripts
 
+Each time you want to run a script:
+
 1. Open a terminal in this folder  
-2. **Activate the venv** (see above — skip `python -m venv venv`, that’s already done)  
+   - **Windows:** open the folder in File Explorer, click the address bar, type `cmd`, press Enter  
+   - Or in VS Code / Cursor: **Terminal → New Terminal**
+
+2. Activate the venv (you only created it once — you just activate it each time):
+
+   **Windows (Command Prompt):**
+
+   ```cmd
+   venv\Scripts\activate
+   ```
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   venv\Scripts\Activate.ps1
+   ```
+
+   **Mac / Linux:**
+
+   ```bash
+   source venv/bin/activate
+   ```
+
+   You should see `(venv)` at the start of your command line.
+
 3. Run one of the scripts:
 
-**YOLO11 pose:**
+   **YOLO11 pose:**
 
-```cmd
-python test_yolo11_pose_webcam.py
-```
+   ```cmd
+   python test_yolo11_pose_webcam.py
+   ```
 
-**MediaPipe pose:**
+   **MediaPipe pose:**
 
-```cmd
-python test_mediapipe_pose_webcam.py
-```
+   ```cmd
+   python test_mediapipe_pose_webcam.py
+   ```
 
 The first run may download a model file (YOLO or MediaPipe). That’s normal.
 
